@@ -18,13 +18,25 @@
       padding: 20px;
       text-align: center;
     }
+    /* パソコンで見たときは"pc"のclassがついた画像が表示される */
+	.pc { display: block !important; }
+	.sp { display: none !important; }
+ 
+	/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+	@media only screen and (max-width: 750px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
 
     h1 {
       font-size: 32px;
       margin: 0;
     }
 
-img {max-width：100％}
+      .full-width-img {
+		margin: auto;
+		width: 1000px;}
+
     main {
       max-width: 1000px;
       margin: 20px auto;
@@ -88,8 +100,10 @@ img {max-width：100％}
       table {
         font-size: 12px;
       }
-      img {max-width：100％}
-
+      .full-width-img {
+			margin: auto;
+			width: 100%;
+}
     }
   </style>
 </head>
@@ -105,7 +119,7 @@ img {max-width：100％}
         京都・大阪エリアで2泊3日の旅行しましょう。
         京都の寺社巡りとUSJ！
       </p>
-      <div align="center"><img src="./fp.jpg"></div>
+      <div align="center"><img class="full-width-img" src="./fp.jpg"></div>
     </section>
 
     <section id="schedule">
@@ -176,7 +190,7 @@ img {max-width：100％}
           </tr>
           <tr>
             <td>午前中</td>
-            <td>大阪のUSJ</td>
+            <td>USJ</td>
             <td>一日中遊ぶ（滞在時間: 約8時間）<br>チケット費用: 大人 8,000円</td>
           </tr>
           <tr>
